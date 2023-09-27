@@ -1,0 +1,128 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 50%;
+    background-color: white;
+    margin: 0vw 1vw 20vw 20vw;
+    border-radius: 10px;
+}
+
+.main-content-header {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+.main-content-header h1 {
+    font-size: 1.5rem;
+    font-weight: 650;
+    margin: 5px;
+    padding: 10px
+}
+
+.main-content-header select {
+    margin: 20px 10px 15px 14vw;
+    padding: 10px;
+    font-size: .75rem;
+    font-weight: 500;
+    border-radius: 50px;
+    width: 8vw;
+    height: 3.5vh;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    background-color: #f3f4f6;
+}
+
+
+.side-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 20%;
+    background-color: white;
+    margin: 8vw 20vw 0vw 1vw;
+    border-radius: 10px;
+}
+
+.side-content h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px;
+    padding: 10px
+}
+
+.gray-line {
+    border-top: 1px solid gray;
+    height: 1px;
+    width: 90%;
+}
+
+.side-content-news p img {
+    width: 50px;
+    height: 30px;
+    margin: 5px 0px 5px -5px;
+}
+
+.news-title {
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.news-story {
+    font-size: .75rem;
+    font-weight: 100;
+}
+
+.side-content-story {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    margin: 10px;
+    padding: 10px
+}
+
+.side-content-story img {
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.side-content-news {
+    margin: 8px
+}
+
+.side-content-story-text .news-story-footer {
+    font-size: .6rem;
+    color: gray;
+    margin-top: 10px;
+}
+
+.all-news-tag {
+    font-size: .8rem;
+    margin: 10px 0;
+}
+
+.all-news-tag button {
+    background-color: rgb(255, 255, 255);
+    color: #4747c0;
+    border-radius: 50px;
+    border: none;
+    padding: 5px 10px;
+    font-size: .85rem;
+    font-weight: 700;
+    margin: 10px 0;
+    cursor: pointer;
+}
