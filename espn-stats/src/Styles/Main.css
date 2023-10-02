@@ -6,40 +6,48 @@
     height: 100vh;
 }
 
-.main-content {
+
+.main-container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    margin: 10vh auto;
+}
+
+.main-content {
     height: auto;
-    width: 50%;
+    width: 1000px;
     background-color: white;
-    margin: 0vw 1vw 20vw 20vw;
     border-radius: 10px;
+    margin: 0 .75vw 0 0
 }
 
 .main-content-header {
     display: flex;
-    justify-content: left;
-    align-items: left;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main-content-header h1 {
     font-size: 1.5rem;
     font-weight: 650;
     margin: 5px;
-    padding: 10px
+    padding: 10px;
+    justify-content: left;
+    align-items: center;
 }
 
 .main-content-header select {
-    margin: 20px 10px 15px 14vw;
-    padding: 10px;
-    font-size: .75rem;
+    text-align: center;
+    font-size: .7rem;
     font-weight: 500;
     border-radius: 50px;
-    width: 8vw;
+    width: 9.0vw;
     height: 3.5vh;
     border: 1px solid #e5e7eb;
-    display: flex;
     background-color: #f3f4f6;
+    margin: 10px
 }
 
 
@@ -49,9 +57,8 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 20%;
+    width: 350px;
     background-color: white;
-    margin: 8vw 20vw 0vw 1vw;
     border-radius: 10px;
 }
 
@@ -126,3 +133,65 @@
     margin: 10px 0;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1550px) {
+    .main-content {
+        margin: 0vw 1vw 15vw 6vw;
+    }
+
+    .side-content {
+        margin: 20vw 5vw 0vw 1vw;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .main-content {
+        margin: 2vh auto;
+        width: 1000px;
+    }
+
+    .side-content {
+        display: none
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-content-header select {
+        display: none;
+    }
+}
+
+.main-content-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin: 10px;
+    padding: 10px
+}
+
+.main-content-buttons button {
+    background-color: rgb(255, 255, 255);
+    color: #575757;
+    border: none;
+    padding: 5px 10px;
+    font-size: .85rem;
+    font-weight: 700;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 50%;
+    height: 30px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.main-content-buttons button:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+.main-content-buttons button:active {
+    box-shadow: rgba(233, 41, 41, 1) 0 3px 0 0;
+}
+
+
+

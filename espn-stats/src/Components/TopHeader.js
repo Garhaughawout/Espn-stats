@@ -29,13 +29,13 @@ export default function TopHeader() {
                 <div className="header-left-content">
                     <img src={EspnLogo} alt="ESPN Logo" />
                     <ul className="header-content-buttons">
-                        <li><button onClick={handleShowMenu} className="header-content-button">NFL <span style={arrowStyling}>&#709;</span></button></li>
-                        <li><button onClick={handleShowMenu} className="header-content-button">MLB <span style={arrowStyling}>&#709;</span></button></li>
-                        <li><button onClick={handleShowMenu} className="header-content-button">NCAAF <span style={arrowStyling}>&#709;</span></button></li>
-                        <li><button onClick={handleShowMenu} className="header-content-button">NBA <span style={arrowStyling}>&#709;</span></button></li>
-                        <li><button onClick={handleShowMenu} className="header-content-button">NHL <span style={arrowStyling}>&#709;</span></button></li>
-                        <li><button onClick={handleShowMenu} className="header-content-button">Soccer <span style={arrowStyling}>&#709;</span></button></li>
-                        <li><button onClick={handleShowMenu} className="header-content-button">... <span style={arrowStyling}>&#709;</span></button></li>
+                    <li><button onClick={handleShowMenu} className="header-content-button" type="button" >NFL <span style={arrowStyling}>&#709;</span></button></li>
+                        <li><button onClick={handleShowMenu} className="header-content-button" type="button">MLB <span style={arrowStyling}>&#709;</span></button></li>
+                        <li><button onClick={handleShowMenu} className="header-content-button" type="button">NCAAF <span style={arrowStyling}>&#709;</span></button></li>
+                        <li><button onClick={handleShowMenu} className="header-content-button" type="button">NBA <span style={arrowStyling}>&#709;</span></button></li>
+                        <li><button onClick={handleShowMenu} className="header-content-button" type="button">NHL <span style={arrowStyling}>&#709;</span></button></li>
+                        <li><button onClick={handleShowMenu} className="header-content-button" type="button">Soccer <span style={arrowStyling}>&#709;</span></button></li>
+                        <li><button onClick={handleShowMenu} className="header-content-button" type="button">... <span style={arrowStyling}>&#709;</span></button></li>
                     </ul>
                 </div>
                 <div className="header-right-content">

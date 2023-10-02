@@ -4,13 +4,19 @@ import storyimg1 from "../Images/storyimg-1.jpg";
 import storyimg2 from "../Images/storyimg-2.jpg";
 import storyimg3 from "../Images/storyimg-3.jpg";
 
-export default function Main() {
+export default function Main({pointPlayerStats, assistPlayerStats, threePointPlayerStats, 
+    stealPlayerStats, blockPlayerStats, reboundPlayerStats}) {
     
     
     const [selectedTeam, setSelectedTeam] = useState("");
-    
+    const [contentShown, setContentShown] = useState("Player");    
 
-    function handleChange(event) {
+
+    function handleContentShown(event) {
+        setContentShown(prevState => prevState === "Player" ? "Team" : "Player");
+    }
+
+    function handleTeamChange(event) {
         setSelectedTeam(event.target.value);
     }
     
@@ -19,15 +25,39 @@ export default function Main() {
         return <option value={team}>{team}</option>
     })
 
+
+
     return (
         <div className="main-container">
             <div className="main-content">
                 <div className="main-content-header">
-                    <h1>NBA Stats Leaders 2022-23</h1>
-                    <select onChange={handleChange}>
-                        <option>Team Statistics</option>
-                        {teams}
-                    </select>
+                    <div className="main-content-header-text">
+                        <h1>NBA Stats Leaders 2022-23</h1>
+                    </div>
+                    <div className="main-content-header-select">
+                        <select onChange={handleTeamChange}>
+                            <option>Team Statistics</option>
+                            {teams}
+                        </select>
+                    </div>
+                </div>
+                <div className="main-content-buttons">
+                    <button onClick={handleContentShown}>Player</button>
+                    <button onClick={handleContentShown}>Team</button>
+                </div>
+                <div>
+                    {contentShown === "Player" ? <div className="main-content-stats">
+                    {pointPlayerStats}
+                    {reboundPlayerStats}
+                    {assistPlayerStats}
+                    {blockPlayerStats}
+                    {threePointPlayerStats}
+                    {stealPlayerStats}
+                </div> :
+                <div>
+                    <h1>Team Stats</h1>
+                </div>
+                }
                 </div>
             </div>
             <div className="side-content">
