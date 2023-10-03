@@ -116,6 +116,7 @@ export default function Main({pointPlayerStats, assistPlayerStats, threePointPla
                     <button>All NBA News</button>
                 </div>
             </div>
+            
         </div>
     )
 }

@@ -49,7 +49,7 @@
     color: #fff;
     background-color: #2b2c2d;
     border: none;
-    width: 65px;
+    width: 150px;
     height: 50px;
     cursor: pointer;
     border: none;
@@ -70,6 +70,9 @@
     padding: 0;
     list-style: none;
     float: bottom;
+    position: absolute;
+    top: 50px;
+    left: 325px;
 }
 
 .dropdown-list-item {

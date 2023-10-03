@@ -6,6 +6,7 @@ import '../src/Styles/index.css';
 import '../src/Styles/BottomHeader.css';
 import '../src/Styles/Main.css';
 import '../src/Styles/Stats.css';
+import '../src/Styles/TeamStatsSection.css';
 import App from '../src/Components/App';
 import reportWebVitals from './reportWebVitals';
 

@@ -1,0 +1,10 @@
+.team-stats-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1000px;
+    margin: 20vh 14vw;
+    background-color: white;
+    border-radius: 10px;
+}
+
