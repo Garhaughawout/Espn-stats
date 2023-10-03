@@ -189,7 +189,7 @@
 }
 
 
-.main-content-buttons button:active {
+.main-content-buttons button:focus {
     box-shadow: rgba(233, 41, 41, 1) 0 3px 0 0;
 }
 

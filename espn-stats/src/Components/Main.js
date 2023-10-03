@@ -13,7 +13,11 @@ export default function Main({pointPlayerStats, assistPlayerStats, threePointPla
 
 
     function handleContentShown(event) {
-        setContentShown(prevState => prevState === "Player" ? "Team" : "Player");
+        if (event.target.value === contentShown) {
+            return;
+        }else {
+        setContentShown(prevState => prevState === "Player" ? "Team" : "Player")
+        };
     }
 
     function handleTeamChange(event) {
@@ -42,8 +46,8 @@ export default function Main({pointPlayerStats, assistPlayerStats, threePointPla
                     </div>
                 </div>
                 <div className="main-content-buttons">
-                    <button onClick={handleContentShown}>Player</button>
-                    <button onClick={handleContentShown}>Team</button>
+                    <button onClick={handleContentShown} value={"Player"}>Player</button>
+                    <button onClick={handleContentShown} value={"Team"}>Team</button>
                 </div>
                 <div>
                     {contentShown === "Player" ? <div className="main-content-stats">
