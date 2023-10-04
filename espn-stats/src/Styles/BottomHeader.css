@@ -11,6 +11,8 @@
     align-items: center;
     justify-content: left;
     background-color: white;
+    position: fixed;
+    width: 100%
 }
 
 .bottom-header-buttons button {

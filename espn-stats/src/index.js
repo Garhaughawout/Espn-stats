@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import '../src/Styles/App.css';
 import '../src/Styles/TopHeader.css';
 import '../src/Styles/index.css';
 import '../src/Styles/BottomHeader.css';

@@ -5,7 +5,9 @@ import storyimg2 from "../Images/storyimg-2.jpg";
 import storyimg3 from "../Images/storyimg-3.jpg";
 
 export default function Main({pointPlayerStats, assistPlayerStats, threePointPlayerStats, 
-    stealPlayerStats, blockPlayerStats, reboundPlayerStats}) {
+    stealPlayerStats, blockPlayerStats, reboundPlayerStats, pointTeamStats, pointsAllowedTeamStats, fieldGoalTeamStats,
+    reboundTeamStats, pointDiffTeamStats, blocksTeamStats,
+}) {
     
     
     const [selectedTeam, setSelectedTeam] = useState("");
@@ -22,6 +24,7 @@ export default function Main({pointPlayerStats, assistPlayerStats, threePointPla
 
     function handleTeamChange(event) {
         setSelectedTeam(event.target.value);
+        alert(`You selected the ${event.target.value}; this would load a different page with the ${event.target.value} stats. This is a work in progress.`)
     }
     
 
@@ -29,7 +32,10 @@ export default function Main({pointPlayerStats, assistPlayerStats, threePointPla
         return <option value={team}>{team}</option>
     })
 
-
+    const selectedShadow = {
+        boxShadow: "0px 3px 0px 0px #E92929",
+        color: "black"
+    }
 
     return (
         <div className="main-container">
@@ -46,8 +52,14 @@ export default function Main({pointPlayerStats, assistPlayerStats, threePointPla
                     </div>
                 </div>
                 <div className="main-content-buttons">
+                    {contentShown === "Player" ? 
+                    <button style={selectedShadow} onClick={handleContentShown} value={"Player"}>Player</button> : 
                     <button onClick={handleContentShown} value={"Player"}>Player</button>
+                    }
+                    {contentShown === "Team" ? 
+                    <button style={selectedShadow} onClick={handleContentShown} value={"Team"}>Team</button> :
                     <button onClick={handleContentShown} value={"Team"}>Team</button>
+                    }
                 </div>
                 <div>
                     {contentShown === "Player" ? <div className="main-content-stats">
@@ -58,8 +70,13 @@ export default function Main({pointPlayerStats, assistPlayerStats, threePointPla
                     {threePointPlayerStats}
                     {stealPlayerStats}
                 </div> :
-                <div>
-                    <h1>Team Stats</h1>
+                <div className="main-content-stats">
+                    {pointTeamStats}
+                    {pointsAllowedTeamStats}
+                    {fieldGoalTeamStats}
+                    {reboundTeamStats}
+                    {pointDiffTeamStats}
+                    {blocksTeamStats}
                 </div>
                 }
                 </div>
@@ -116,7 +133,7 @@ export default function Main({pointPlayerStats, assistPlayerStats, threePointPla
                     <button>All NBA News</button>
                 </div>
             </div>
-            
+
         </div>
     )
 }

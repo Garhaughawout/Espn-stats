@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function Stats(props) {
+export default function PlayerStats(props) {
 
     
     return (
@@ -52,6 +52,7 @@ export default function Stats(props) {
                                 {props.playerThreeStat}
                             </div>
                         </li>
+                        <span className="gray-item">
                         <li className="stats-list-item">
                             <div className="stat-list-name">
                                 <span className="stat-list-ranking">4</span>
@@ -63,6 +64,7 @@ export default function Stats(props) {
                                 {props.playerFourStat}
                             </div>
                         </li>
+                        </span>
                         <li className="stats-list-item">
                             <div className="stat-list-name">
                                 <span className="stat-list-ranking">5</span>

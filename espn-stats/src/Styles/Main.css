@@ -3,16 +3,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-
-.main-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 40vh 0 0 0;
+    margin: 40vh 0 1vh 0;
 }
 
 .main-content {
@@ -91,6 +82,7 @@
     width: 350px;
     background-color: white;
     border-radius: 10px;
+    margin: 10vh 0 0 0
 }
 
 .side-content h1 {
@@ -155,7 +147,7 @@
 
 .all-news-tag button {
     background-color: rgb(255, 255, 255);
-    color: #4747c0;
+    color: rgb(5, 99, 193);
     border-radius: 50px;
     border: none;
     padding: 5px 10px;
@@ -167,7 +159,7 @@
 
 @media screen and (max-width: 1550px) {
     .main-content {
-        margin: 20vw 0vw 15vw 6vw;
+        margin: 20vw 0vw 1vw 6vw;
     }
 
     .side-content {
@@ -189,6 +181,13 @@
 @media screen and (max-width: 1200px) {
     .main-content-header select {
         display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main-container {
+        margin: 20vh auto 0 auto;
+        width: 100%;
     }
 }
 
