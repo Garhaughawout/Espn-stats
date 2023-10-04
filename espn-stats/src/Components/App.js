@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import React from 'react';
 import TopHeader from './TopHeader';
 import BottomHeader from './BottomHeader';
 import Main from './Main';
@@ -8,22 +7,9 @@ import TeamStatsFooter from './TeamStatsFooter';
 import TeamStats from './TeamStats';
 import TeamData from './TeamData';
 import playerInfo from './PlayerData';
+import Footer from './Footer'
 
 function App() {
-    const [results, setResults] = useState([]);
-    const URL = "https://www.balldontlie.io/api/v1/stats"
-
-    useEffect(() => {
-        fetch(URL)
-           .then((res) => res.json())
-           .then((data) => {
-              setResults(data);
-              console.log(data);
-           })
-           .catch((err) => {
-              console.log(err.message);
-           });
-     }, []);
 
     return (
     <div className="App">
@@ -43,8 +29,42 @@ function App() {
             pointDiffTeamStats={PointDiffTeamComponent}
             blocksTeamStats={blockTeamComponent}
         />
-        <TeamStatsFooter />
+        <TeamStatsFooter  
+        header="Team Statistics"
+        sideHeaderOne="TEAM"
+        firstContentOne="Points"
+        firstContentTwo="Rebounds"
+        firstContentThree="Field Goal %"
 
+        sideHeaderTwo="OPPONENT"
+        secondContentOne="Opponent Points"
+        secondContentTwo="Opponent Rebounds"
+        secondContentThree="Opponent Field Goal %"
+
+        sideHeaderThree="DIFFERENTIAL"
+        thirdContentOne="Points Differential"
+        thirdContentTwo="Rebounds Differential"
+        thirdContentThree="Field Goal % Differential"
+        />
+        <TeamStatsFooter 
+        
+        header="Player Statistics"
+        sideHeaderOne="OFFENSIVE"
+        firstContentOne="Points"
+        firstContentTwo="Assists"
+        firstContentThree="3-Pointers Made"
+
+        sideHeaderTwo="DEFENSIVE"
+        secondContentOne="Rebounds"
+        secondContentTwo="Blocks"
+        secondContentThree="Steals"
+        
+        sideHeaderThree="EFFICIENCY"
+        thirdContentOne="Field Goal %"
+        thirdContentTwo="Free Throw %"
+        thirdContentThree="Turnovers"
+        />
+        <Footer/>
     </div>
   );
 }

@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 40vh 0 1vh 0;
+    margin: 30vh 0 1vh 0;
 }
 
 .main-content {
@@ -159,7 +159,7 @@
 
 @media screen and (max-width: 1550px) {
     .main-content {
-        margin: 20vw 0vw 1vw 6vw;
+        margin: 0vw 0vw 1vw 6vw;
     }
 
     .side-content {
